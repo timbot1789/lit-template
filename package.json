@@ -1,0 +1,47 @@
+{
+  "name": "lit-template",
+  "private": true,
+  "version": "2.0.1",
+  "description": "A simple template for lit apps",
+  "main": "my-element.js",
+  "module": "my-element.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "lint": "npm run lint:lit-analyzer && npm run lint:eslint",
+    "lint:eslint": "eslint 'src/**/*.ts'",
+    "lint:lit-analyzer": "lit-analyzer",
+    "format": "prettier \"**/*.{cjs,html,js,json,md,ts}\" --ignore-path ./.eslintignore --write",
+    "build:ldo": "ldo build --input src/.shapes --output src/.ldo",
+    "dev": "vite --port 4040"
+  },
+  "keywords": [
+    "web-components",
+    "lit-element",
+    "typescript",
+    "lit"
+  ],
+  "author": "Google LLC",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@lit/context": "^1.1.0",
+    "@material/web": "^1.4.0",
+    "lit": "^3.0.0"
+  },
+  "devDependencies": {
+    "@custom-elements-manifest/analyzer": "^0.6.3",
+    "@open-wc/testing": "^3.1.5",
+    "@types/node": "^15.12.1",
+    "@typescript-eslint/eslint-plugin": "^5.25.0",
+    "@typescript-eslint/parser": "^5.25.0",
+    "eslint": "^8.15.0",
+    "lit-analyzer": "^2.0.3",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "typescript": "~5.3.3",
+    "vite": "^2.3.6",
+    "vite-plugin-node-polyfills": "^0.21.0"
+  },
+  "customElements": "custom-elements.json"
+}
